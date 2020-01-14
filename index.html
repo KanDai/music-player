@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo Music Player</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="./css/app.css">
+<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png">
+<link rel="manifest" href="./manifest.json">
+<link rel="manifest" href="manifest.webmanifest" />
+<script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js" integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc" crossorigin="anonymous"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+}
+</script>
+</head>
+<body>
+
+<audio id="js-audio"></audio>
+
+<div class="player">
+
+  <div class="artwork">
+    <img src="https://dummyimage.com/600x600/1ea845/000000.png" id="js-artwork" alt="">
+  </div>
+
+  <div class="info">
+    <p id="js-title" class="info_title">タイトル</p>
+    <p id="js-album" class="info_album">アルバム名</p>
+    <p id="js-artist" class="info_artist">アーティスト</p>
+  </div>
+
+  <div id="js-control" class="control is-pause">
+    <button type="button" id="js-prev" class="control_item">
+      <i class="material-icons">skip_previous</i>
+    </button>
+    <button type="button" id="js-back" class="control_item">
+      <i class="material-icons">replay_10</i>
+    </button>
+    <button type="button" id="js-play" class="control_item -play">
+      <i class="material-icons">play_arrow</i>
+    </button>
+    <button type="button" id="js-pause" class="control_item -pause">
+      <i class="material-icons">pause</i>
+    </button>
+    <button type="button" id="js-forward" class="control_item">
+      <i class="material-icons">forward_10</i>
+    </button>
+    <button type="button" id="js-next" class="control_item">
+      <i class="material-icons">skip_next</i>
+    </button>
+  </div>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+</html>
