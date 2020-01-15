@@ -2,13 +2,14 @@
 
 Music Player made with PWA
 
-https://simple-qr.netlify.com/
+https://music-player-demo.netlify.com/
 
+# Licence
 
-# ライセンス
+Music
 
-音楽素材
 https://dova-s.jp/
 
-写真素材
+Picture
+
 https://www.pakutaso.com/
